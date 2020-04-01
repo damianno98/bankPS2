@@ -19,7 +19,7 @@ public class BankClient {
         while(menu != 7){
             switch(menu){
                 case 0:
-                    System.out.println("1. Create account \n2. Find Account \n3.Get balance \n4.Deposit \n5.Withdraw \n6.Transfer \n7.Exit \n");
+                    System.out.println("1.Create account \n2.Find Account \n3.Get balance \n4.Deposit \n5.Withdraw \n6.Transfer \n7.Exit \n");
                     menu = sc.nextInt();
                     break;
                 case 1:
@@ -108,8 +108,8 @@ public class BankClient {
     }
 
     public static void main(String[] args) throws IOException {
-        System.out.println(BankClient.class.getResource("/logging.properties"));
-        //LogManager.getLogManager().readConfiguration(BankClient.class.getResourceAsStream("logging.properties"));
+//        System.out.println(BankClient.class.getResource("/logging.properties"));
+        LogManager.getLogManager().readConfiguration(BankClient.class.getResourceAsStream("/logging.properties"));
         start();
     }
 }

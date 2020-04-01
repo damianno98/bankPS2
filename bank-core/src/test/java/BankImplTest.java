@@ -7,9 +7,11 @@ import org.junit.jupiter.api.Test;
 import java.io.IOException;
 import java.math.BigDecimal;
 import java.util.logging.LogManager;
+import java.util.logging.Logger;
 
 public class BankImplTest {
     Bank bank;
+    private final static Logger log = Logger.getLogger(BankImplTest.class.getName());
     @BeforeEach
     void setUp() {
         bank = new BankImpl();
